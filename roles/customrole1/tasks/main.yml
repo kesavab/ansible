@@ -1,0 +1,10 @@
+- template:
+    src: "scripts/script1.sh.j2"
+    dest: "/root/script1.sh"
+    owner: root
+    mode: 700
+
+- cron:
+    name: "cron mae"
+    minute: "*/5"
+    job: "/root/script1.sh >> /var/log/script1.log 2>&1"
