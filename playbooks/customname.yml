@@ -1,0 +1,7 @@
+- name: setup ec2 with all bells and whistles
+  hosts: all
+  vars_files:
+    - "{{ pwd }}/vars/{{ env }}_name.yml"
+  roles:
+    - role: johanmeiring.sftp-server
+    - role: customrole1
