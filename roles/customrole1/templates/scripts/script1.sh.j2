@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+
+IFS=$'\n'
+current_files=(`ls -l ${SYNCDIR} | grep -v '^total' | grep 'file identifier'`)
+
+sleep 10
+
+last_files=(`ls -l ${SYNCDIR} | grep -v '^total' | grep 'file identifier'`)
+
+IFS=$''
+
+files_processed=0
+
+for i in "${current_files[@]}"
+do
+  :
+  for j in "${last_files[@]}"
+  do
+    :
+    ## comment do the necessary job
+  done
+done
